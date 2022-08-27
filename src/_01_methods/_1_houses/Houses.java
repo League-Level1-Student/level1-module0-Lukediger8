@@ -10,22 +10,13 @@ public class Houses {
 	Robot rob = new Robot();
 	public void run() {
 		
-		// Check the recipe to find out what code to put here
-		rob.penDown();
-		rob.setSpeed(9999991);
+		// Check the recipe to find out what code to put her
+		
 		rob.setX(19);
 		rob.setY(481);
-		rob.turn(90);
-		rob.move(30);
-		rob.turn(270);
-		rob.move(100);
-		rob.turn(90);
-		rob.move(30);
-		rob.turn(90);
-		rob.move(100);
-		rob.turn(270);
-		rob.move(30);
-		rob.turn(180);
+		for (int i=0; i < 10; i+=1) {
+			houses();
+		}
 
 
 		
@@ -57,9 +48,8 @@ public class Houses {
 	
 	private void houses() {
 		rob.penDown();
+		rob.setRandomPenColor();
 		rob.setSpeed(9999991);
-		rob.setX(19);
-		rob.setY(481);
 		rob.turn(90);
 		rob.move(30);
 		rob.turn(270);
@@ -70,6 +60,8 @@ public class Houses {
 		rob.move(100);
 		rob.turn(270);
 		rob.move(30);
+		rob.turn(180);
+		rob.turn(90);
 	}
 
 	private void method1(Object turn) {
