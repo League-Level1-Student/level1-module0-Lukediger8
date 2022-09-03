@@ -14,7 +14,7 @@ import processing.core.PImage;
  * 
  * In the draw() method:
  * 2. Set a background color
- * 
+ 
  * 3. Draw a raindrop (ellipse) at the top of the screen
  * 
  * 4. Make the rain fall down the screen.
@@ -51,6 +51,9 @@ public class RainGame extends PApplet {
     PImage bucket;
     int y;
     int x;
+    int raindropX=(int) (Math.random()*WIDTH);
+    int raindropY=40;
+    
 
     // Sets the size of your canvas
     @Override
@@ -60,12 +63,27 @@ public class RainGame extends PApplet {
 
     @Override
     public void setup() {
-
+    	 bucket = loadImage("images/bucket.png");
+    	 bucket.resize(100, 100);
     }
 
     @Override
     public void draw() {
 
+    background(0,0,0);
+   raindropY+=150;
+   if(raindropY>HEIGHT) {
+	   raindropY=0;
+	   raindropX=(int) (Math.random()*WIDTH);
+	   
+   }
+    ellipse((int) raindropX,  raindropY,60,80);
+     image(bucket, mouseX,mouseY);
+  checkCatch(raindropX);
+     textSize(16);
+	   text("Score: " + score, 20, 20);
+     
+    
     }
 
     static public void main(String[] args) {

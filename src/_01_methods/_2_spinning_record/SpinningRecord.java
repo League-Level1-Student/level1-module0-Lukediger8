@@ -27,7 +27,7 @@ public class SpinningRecord extends PApplet {
     public void draw() {
        scoreTracker=scoreTracker+1;
        rotateImage(pictureOfRecord, scoreTracker);
-       image(pictureOfRecord, 0, 0);
+       image(pictureOfRecord, 600, 800);
     }
 
     static public void main(String[] args) {
