@@ -71,7 +71,7 @@ public class RainGame extends PApplet {
     public void draw() {
 
     background(0,0,0);
-   raindropY+=150;
+   raindropY+=10;
    if(raindropY>HEIGHT) {
 	   raindropY=0;
 	   raindropX=(int) (Math.random()*WIDTH);
