@@ -21,6 +21,7 @@ public class ListOfGoals {
 		//   if you did put a lot of goals use a pop-up to say "Wow that's a lot of goals! Awesome!"
 		isManyGoals();
 		
+		JOptionPane.showMessageDialog(null, "you will never succeed in life");
 		
 	}
 	
