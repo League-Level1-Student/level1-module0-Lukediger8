@@ -20,17 +20,15 @@ public class TooManyShapes {
 		
 		int shape = Integer.parseInt(shapes);
 		boolean l = canMakeShape(shape);
+		int a = Integer.parseInt(answer);
 		
 		//4. If the shape CAN be drawn
 		if(l) {
-			calculateTurnAngle(shape);
-			drawPolygons(shape, shape, shape);
-		}
-		
 			//5. Call and save what is returned from calculateTurnAngle()
-		
+		 int e = calculateTurnAngle(a);
 			//6. Use drawPolygons() to draw your shape
-		
+		drawPolygons(a, shape, e);
+		}
 		//7. If the shape CANNOT be drawn 
 		else {
 			notEnoughSides();
